@@ -24,7 +24,7 @@ class Bubble {
     this.y += random(-5, 5);
   }
 
-  show(img) {
+  show() {
 	    noStroke();
 	    // stroke(255);
 	    // strokeWeight(4);
