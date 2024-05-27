@@ -1,2 +1,2 @@
-# Colored-Bubbles
-Bolhas coloridas criadas como exercício no aprendizado do uso da biblioteca P5.js
+# P5.js Studies
+Aprendendo a usar a biblioteca P5.js para programar arte 
