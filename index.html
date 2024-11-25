@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens Organizadas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+        .left-image {
+            flex-shrink: 0;
+        }
+        .left-image img {
+            width: 300px;
+            height: 600px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .left-image img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        .right-images {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .right-images img {
+            width: 210px;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .right-images img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Imagem Comprida à Esquerda -->
+        <div class="left-image">
+            <a href="estrutura-determinada-determinante/estrutura-determinada-determinante.html" target="_blank">
+                <img src="images/WaldemarEstrutura.jpg" alt="Imagem Comprida">
+            </a>
+        </div>
+        <!-- Três Imagens à Direita -->
+        <div class="right-images">
+            <a href="propagar/propagar.html" target="_blank">
+                <img src="images/WaldemarCirculos.jpg" alt="Imagem 2">
+            </a>
+            <a href="recorte-0016/recorte-0016.html" target="_blank">
+                <img src="images/SacilottoCirculos.png" alt="Imagem 3">
+            </a>
+            <a href="concrecao-8332/concrecao-8332.html" target="_blank">
+                <img src="images/SacilottoSetas.jpg" alt="Imagem 4">
+            </a>
+        </div>
+    </div>
+</body>
+</html>
