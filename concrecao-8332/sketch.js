@@ -1,4 +1,5 @@
 let debug = false; // degug do caminho
+let mouseIsInside = true;
 let r = 20; // tamanho da arrow
 let ra = 170; // fator de raio das curvas
 let radius = 20; // raio dos paths
@@ -24,7 +25,18 @@ function mouseOnCanvas() {
 
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  let canvas = createCanvas(windowWidth, windowHeight);
+
+  // Adiciona um ouvinte para o evento `mouseleave`
+  canvas.elt.addEventListener('mouseleave', () => {
+    mouseIsInside = false; // Marca que o mouse saiu da tela
+  });
+  
+  // Adiciona um ouvinte para o evento `mouseenter`
+  canvas.elt.addEventListener('mouseenter', () => {
+    mouseIsInside = true; // Marca que o mouse entrou na tela
+  });
+
   ra = windowWidth / 10;
   r = windowWidth / 60;
   radius = 30;
@@ -116,7 +128,7 @@ function draw() {
 
 
   for (let arrow of arrowsSistem){
-    if (mouseOnCanvas()){
+    if (mouseIsInside){
       arrow.show();
       arrow.borders();
       arrow.flock(arrowsSistem);
