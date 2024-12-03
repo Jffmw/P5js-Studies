@@ -1,5 +1,5 @@
 let propagate = true;
-let maxStructures = 12;
+let maxStructures = 20;
 let nota;
 
 let circleStructureSet = [];
